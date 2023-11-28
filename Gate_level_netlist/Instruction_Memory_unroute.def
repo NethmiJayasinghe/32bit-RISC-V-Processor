@@ -1,0 +1,518 @@
+VERSION 5.6 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "<>" ;
+DESIGN Instruction_Memory ;
+UNITS DISTANCE MICRONS 100 ;
+
+DIEAREA ( -320 -300 ) ( 4480 2300 ) ;
+
+TRACKS Y -300 DO 27 STEP 100 LAYER metal1 ;
+TRACKS X -320.0 DO 61 STEP 80 LAYER metal2 ;
+TRACKS Y -300 DO 27 STEP 100 LAYER metal3 ;
+TRACKS X -320.0 DO 61 STEP 80 LAYER metal4 ;
+TRACKS Y -300 DO 27 STEP 100 LAYER metal5 ;
+TRACKS X -320.0 DO 31 STEP 160 LAYER metal6 ;
+
+VIAS 5 ;
+- viagen21_post
++ RECT metal1 ( -80 -20 ) ( 80 20 )
++ RECT metal2 ( -80 -20 ) ( 80 20 )
++ RECT via ( -45 -10 ) ( -25 10 )
++ RECT via ( 25 -10 ) ( 45 10 ) ;
+- viagen32_post
++ RECT metal3 ( -80 -20 ) ( 80 20 )
++ RECT metal2 ( -80 -20 ) ( 80 20 )
++ RECT via2 ( -45 -10 ) ( -25 10 )
++ RECT via2 ( 25 -10 ) ( 45 10 ) ;
+- viagen43_post
++ RECT metal3 ( -80 -20 ) ( 80 20 )
++ RECT metal4 ( -80 -20 ) ( 80 20 )
++ RECT via3 ( -50 -10 ) ( -30 10 )
++ RECT via3 ( 30 -10 ) ( 50 10 ) ;
+- viagen54_post
++ RECT metal5 ( -80 -20 ) ( 80 20 )
++ RECT metal4 ( -80 -20 ) ( 80 20 )
++ RECT via4 ( -45 -10 ) ( -25 10 )
++ RECT via4 ( 25 -10 ) ( 45 10 ) ;
+- viagen65_post
++ RECT metal5 ( -80 -25 ) ( 80 25 )
++ RECT metal6 ( -80 -25 ) ( 80 25 )
++ RECT via5 ( -65 -15 ) ( -35 15 )
++ RECT via5 ( 35 -15 ) ( 65 15 ) ;
+END VIAS
+
+COMPONENTS 40 ;
+- BUFX2_12 BUFX2 + PLACED ( 40 50 ) S ;
+- BUFX2_26 BUFX2 + PLACED ( 280 50 ) S ;
+- BUFX2_30 BUFX2 + PLACED ( 520 50 ) FS ;
+- BUFX2_4 BUFX2 + PLACED ( 760 50 ) FS ;
+- FILL_0_0_0 FILL + PLACED ( 1000 50 ) FS ;
+- FILL_0_0_1 FILL + PLACED ( 1080 50 ) FS ;
+- BUFX2_9 BUFX2 + PLACED ( 1160 50 ) FS ;
+- BUFX2_8 BUFX2 + PLACED ( 1400 50 ) FS ;
+- BUFX2_18 BUFX2 + PLACED ( 1640 50 ) FS ;
+- BUFX2_22 BUFX2 + PLACED ( 1880 50 ) FS ;
+- BUFX2_16 BUFX2 + PLACED ( 2120 50 ) FS ;
+- BUFX2_32 BUFX2 + PLACED ( 2360 50 ) FS ;
+- BUFX2_20 BUFX2 + PLACED ( 2600 50 ) FS ;
+- FILL_0_1_0 FILL + PLACED ( 2840 50 ) FS ;
+- FILL_0_1_1 FILL + PLACED ( 2920 50 ) FS ;
+- BUFX2_29 BUFX2 + PLACED ( 3000 50 ) FS ;
+- BUFX2_13 BUFX2 + PLACED ( 3240 50 ) FS ;
+- BUFX2_27 BUFX2 + PLACED ( 3480 50 ) FS ;
+- BUFX2_24 BUFX2 + PLACED ( 3720 50 ) FS ;
+- BUFX2_23 BUFX2 + PLACED ( 3960 50 ) FS ;
+- BUFX2_15 BUFX2 + PLACED ( 40 1050 ) FN ;
+- BUFX2_2 BUFX2 + PLACED ( 280 1050 ) FN ;
+- BUFX2_21 BUFX2 + PLACED ( 520 1050 ) N ;
+- BUFX2_7 BUFX2 + PLACED ( 760 1050 ) N ;
+- FILL_1_0_0 FILL + PLACED ( 1000 1050 ) N ;
+- FILL_1_0_1 FILL + PLACED ( 1080 1050 ) N ;
+- BUFX2_6 BUFX2 + PLACED ( 1160 1050 ) N ;
+- BUFX2_19 BUFX2 + PLACED ( 1400 1050 ) N ;
+- BUFX2_28 BUFX2 + PLACED ( 1640 1050 ) N ;
+- BUFX2_10 BUFX2 + PLACED ( 1880 1050 ) N ;
+- BUFX2_3 BUFX2 + PLACED ( 2120 1050 ) N ;
+- BUFX2_11 BUFX2 + PLACED ( 2360 1050 ) N ;
+- BUFX2_31 BUFX2 + PLACED ( 2600 1050 ) N ;
+- FILL_1_1_0 FILL + PLACED ( 2840 1050 ) N ;
+- FILL_1_1_1 FILL + PLACED ( 2920 1050 ) N ;
+- BUFX2_1 BUFX2 + PLACED ( 3000 1050 ) N ;
+- BUFX2_14 BUFX2 + PLACED ( 3240 1050 ) N ;
+- BUFX2_25 BUFX2 + PLACED ( 3480 1050 ) N ;
+- BUFX2_17 BUFX2 + PLACED ( 3720 1050 ) N ;
+- BUFX2_5 BUFX2 + PLACED ( 3960 1050 ) N ;
+END COMPONENTS
+
+PINS 67 ;
+- vdd + NET vdd
+  + LAYER metal6 ( -80 -40 ) ( 80 40 )
+  + PLACED ( 1040 -260 ) N ;
+- gnd + NET gnd
+  + LAYER metal6 ( -80 -40 ) ( 80 40 )
+  + PLACED ( 2880 -260 ) N ;
+- rst + NET rst
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 240 2300 ) N ;
+- A[0] + NET A[0]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 2200 ) N ;
+- A[1] + NET A[1]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1520 -200 ) N ;
+- A[2] + NET A[2]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4160 2300 ) N ;
+- A[3] + NET A[3]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 200 ) N ;
+- A[4] + NET A[4]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4400 2300 ) N ;
+- A[5] + NET A[5]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3360 -200 ) N ;
+- A[6] + NET A[6]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2240 2300 ) N ;
+- A[7] + NET A[7]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 0 ) N ;
+- A[8] + NET A[8]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 640 2300 ) N ;
+- A[9] + NET A[9]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 600 ) N ;
+- A[10] + NET A[10]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3040 -200 ) N ;
+- A[11] + NET A[11]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 80 2300 ) N ;
+- A[12] + NET A[12]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1200 -200 ) N ;
+- A[13] + NET A[13]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1520 2300 ) N ;
+- A[14] + NET A[14]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 2000 ) N ;
+- A[15] + NET A[15]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 1400 ) N ;
+- A[16] + NET A[16]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 1000 ) N ;
+- A[17] + NET A[17]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2000 2300 ) N ;
+- A[18] + NET A[18]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 480 2300 ) N ;
+- A[19] + NET A[19]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 400 ) N ;
+- A[20] + NET A[20]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4000 2300 ) N ;
+- A[21] + NET A[21]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 2200 ) N ;
+- A[22] + NET A[22]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3520 -200 ) N ;
+- A[23] + NET A[23]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 1000 ) N ;
+- A[24] + NET A[24]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 600 ) N ;
+- A[25] + NET A[25]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2640 2300 ) N ;
+- A[26] + NET A[26]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 1200 ) N ;
+- A[27] + NET A[27]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 200 ) N ;
+- A[28] + NET A[28]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 800 ) N ;
+- A[29] + NET A[29]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 2000 ) N ;
+- A[30] + NET A[30]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 400 ) N ;
+- A[31] + NET A[31]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 800 ) N ;
+- RD[0] + NET RD[0]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3680 2300 ) N ;
+- RD[1] + NET RD[1]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 80 -200 ) N ;
+- RD[2] + NET RD[2]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4160 -200 ) N ;
+- RD[3] + NET RD[3]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 320 -200 ) N ;
+- RD[4] + NET RD[4]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3840 -200 ) N ;
+- RD[5] + NET RD[5]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2400 2300 ) N ;
+- RD[6] + NET RD[6]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2640 -200 ) N ;
+- RD[7] + NET RD[7]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 480 -200 ) N ;
+- RD[8] + NET RD[8]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3520 2300 ) N ;
+- RD[9] + NET RD[9]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2240 -200 ) N ;
+- RD[10] + NET RD[10]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 1800 ) N ;
+- RD[11] + NET RD[11]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3200 2300 ) N ;
+- RD[12] + NET RD[12]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 720 -200 ) N ;
+- RD[13] + NET RD[13]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 1600 ) N ;
+- RD[14] + NET RD[14]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1360 2300 ) N ;
+- RD[15] + NET RD[15]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1200 2300 ) N ;
+- RD[16] + NET RD[16]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1360 -200 ) N ;
+- RD[17] + NET RD[17]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 880 -200 ) N ;
+- RD[18] + NET RD[18]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3040 2300 ) N ;
+- RD[19] + NET RD[19]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3360 2300 ) N ;
+- RD[20] + NET RD[20]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3680 -200 ) N ;
+- RD[21] + NET RD[21]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 1800 ) N ;
+- RD[22] + NET RD[22]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( -240 1600 ) N ;
+- RD[23] + NET RD[23]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2400 -200 ) N ;
+- RD[24] + NET RD[24]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 1400 ) N ;
+- RD[25] + NET RD[25]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1760 -200 ) N ;
+- RD[26] + NET RD[26]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 1680 2300 ) N ;
+- RD[27] + NET RD[27]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 3200 -200 ) N ;
+- RD[28] + NET RD[28]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 800 2300 ) N ;
+- RD[29] + NET RD[29]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 2000 -200 ) N ;
+- RD[30] + NET RD[30]
+  + LAYER metal2 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4000 -200 ) N ;
+- RD[31] + NET RD[31]
+  + LAYER metal3 ( -15 -15 ) ( 15 15 )
+  + PLACED ( 4480 1200 ) N ;
+END PINS
+
+NETS 66 ;
+- gnd
+  ( BUFX2_32 A ) 
+  ( BUFX2_31 A ) 
+  ( BUFX2_30 A ) 
+  ( BUFX2_29 A ) 
+  ( BUFX2_28 A ) 
+  ( BUFX2_27 A ) 
+  ( BUFX2_26 A ) 
+  ( BUFX2_25 A ) 
+  ( BUFX2_24 A ) 
+  ( BUFX2_23 A ) 
+  ( BUFX2_22 A ) 
+  ( BUFX2_21 A ) 
+  ( BUFX2_20 A ) 
+  ( BUFX2_19 A ) 
+  ( BUFX2_18 A ) 
+  ( BUFX2_17 A ) 
+  ( BUFX2_16 A ) 
+  ( BUFX2_15 A ) 
+  ( BUFX2_14 A ) 
+  ( BUFX2_13 A ) 
+  ( BUFX2_12 A ) 
+  ( BUFX2_11 A ) 
+  ( BUFX2_10 A ) 
+  ( BUFX2_9 A ) 
+  ( BUFX2_8 A ) 
+  ( BUFX2_7 A ) 
+  ( BUFX2_6 A ) 
+  ( BUFX2_5 A ) 
+  ( BUFX2_4 A ) 
+  ( BUFX2_3 A ) 
+  ( BUFX2_2 A ) 
+  ( BUFX2_1 A ) ;
+- RD[0]
+  ( PIN RD[0] ) 
+  ( BUFX2_1 Y ) ;
+- RD[10]
+  ( PIN RD[10] ) 
+  ( BUFX2_2 Y ) ;
+- RD[11]
+  ( PIN RD[11] ) 
+  ( BUFX2_3 Y ) ;
+- RD[12]
+  ( PIN RD[12] ) 
+  ( BUFX2_4 Y ) ;
+- RD[13]
+  ( PIN RD[13] ) 
+  ( BUFX2_5 Y ) ;
+- RD[14]
+  ( PIN RD[14] ) 
+  ( BUFX2_6 Y ) ;
+- RD[15]
+  ( PIN RD[15] ) 
+  ( BUFX2_7 Y ) ;
+- RD[16]
+  ( PIN RD[16] ) 
+  ( BUFX2_8 Y ) ;
+- RD[17]
+  ( PIN RD[17] ) 
+  ( BUFX2_9 Y ) ;
+- RD[18]
+  ( PIN RD[18] ) 
+  ( BUFX2_10 Y ) ;
+- RD[19]
+  ( PIN RD[19] ) 
+  ( BUFX2_11 Y ) ;
+- RD[1]
+  ( PIN RD[1] ) 
+  ( BUFX2_12 Y ) ;
+- RD[20]
+  ( PIN RD[20] ) 
+  ( BUFX2_13 Y ) ;
+- RD[21]
+  ( PIN RD[21] ) 
+  ( BUFX2_14 Y ) ;
+- RD[22]
+  ( PIN RD[22] ) 
+  ( BUFX2_15 Y ) ;
+- RD[23]
+  ( PIN RD[23] ) 
+  ( BUFX2_16 Y ) ;
+- RD[24]
+  ( PIN RD[24] ) 
+  ( BUFX2_17 Y ) ;
+- RD[25]
+  ( PIN RD[25] ) 
+  ( BUFX2_18 Y ) ;
+- RD[26]
+  ( PIN RD[26] ) 
+  ( BUFX2_19 Y ) ;
+- RD[27]
+  ( PIN RD[27] ) 
+  ( BUFX2_20 Y ) ;
+- RD[28]
+  ( PIN RD[28] ) 
+  ( BUFX2_21 Y ) ;
+- RD[29]
+  ( PIN RD[29] ) 
+  ( BUFX2_22 Y ) ;
+- RD[2]
+  ( PIN RD[2] ) 
+  ( BUFX2_23 Y ) ;
+- RD[30]
+  ( PIN RD[30] ) 
+  ( BUFX2_24 Y ) ;
+- RD[31]
+  ( PIN RD[31] ) 
+  ( BUFX2_25 Y ) ;
+- RD[3]
+  ( PIN RD[3] ) 
+  ( BUFX2_26 Y ) ;
+- RD[4]
+  ( PIN RD[4] ) 
+  ( BUFX2_27 Y ) ;
+- RD[5]
+  ( PIN RD[5] ) 
+  ( BUFX2_28 Y ) ;
+- RD[6]
+  ( PIN RD[6] ) 
+  ( BUFX2_29 Y ) ;
+- RD[7]
+  ( PIN RD[7] ) 
+  ( BUFX2_30 Y ) ;
+- RD[8]
+  ( PIN RD[8] ) 
+  ( BUFX2_31 Y ) ;
+- RD[9]
+  ( PIN RD[9] ) 
+  ( BUFX2_32 Y ) ;
+- rst
+  ( PIN rst ) ;
+- A[0]
+  ( PIN A[0] ) ;
+- A[1]
+  ( PIN A[1] ) ;
+- A[2]
+  ( PIN A[2] ) ;
+- A[3]
+  ( PIN A[3] ) ;
+- A[4]
+  ( PIN A[4] ) ;
+- A[5]
+  ( PIN A[5] ) ;
+- A[6]
+  ( PIN A[6] ) ;
+- A[7]
+  ( PIN A[7] ) ;
+- A[8]
+  ( PIN A[8] ) ;
+- A[9]
+  ( PIN A[9] ) ;
+- A[10]
+  ( PIN A[10] ) ;
+- A[11]
+  ( PIN A[11] ) ;
+- A[12]
+  ( PIN A[12] ) ;
+- A[13]
+  ( PIN A[13] ) ;
+- A[14]
+  ( PIN A[14] ) ;
+- A[15]
+  ( PIN A[15] ) ;
+- A[16]
+  ( PIN A[16] ) ;
+- A[17]
+  ( PIN A[17] ) ;
+- A[18]
+  ( PIN A[18] ) ;
+- A[19]
+  ( PIN A[19] ) ;
+- A[20]
+  ( PIN A[20] ) ;
+- A[21]
+  ( PIN A[21] ) ;
+- A[22]
+  ( PIN A[22] ) ;
+- A[23]
+  ( PIN A[23] ) ;
+- A[24]
+  ( PIN A[24] ) ;
+- A[25]
+  ( PIN A[25] ) ;
+- A[26]
+  ( PIN A[26] ) ;
+- A[27]
+  ( PIN A[27] ) ;
+- A[28]
+  ( PIN A[28] ) ;
+- A[29]
+  ( PIN A[29] ) ;
+- A[30]
+  ( PIN A[30] ) ;
+- A[31]
+  ( PIN A[31] ) ;
+END NETS
+
+SPECIALNETS 2 ;
+- vdd
++ FIXED metal1 40 ( 1040 50 ) ( * * ) viagen21_post
+  NEW metal2 40 ( 1040 50 ) ( * * ) viagen32_post
+  NEW metal3 40 ( 1040 50 ) ( * * ) viagen43_post
+  NEW metal4 40 ( 1040 50 ) ( * * ) viagen54_post
+  NEW metal5 50 ( 1040 50 ) ( * * ) viagen65_post
+  NEW metal1 40 ( 1040 2050 ) ( * * ) viagen21_post
+  NEW metal2 40 ( 1040 2050 ) ( * * ) viagen32_post
+  NEW metal3 40 ( 1040 2050 ) ( * * ) viagen43_post
+  NEW metal4 40 ( 1040 2050 ) ( * * ) viagen54_post
+  NEW metal5 50 ( 1040 2050 ) ( * * ) viagen65_post
+  NEW metal6 160 ( 1040 -300 ) ( * 2300 )
+ ;
+- gnd
++ FIXED metal1 40 ( 2880 1050 ) ( * * ) viagen21_post
+  NEW metal2 40 ( 2880 1050 ) ( * * ) viagen32_post
+  NEW metal3 40 ( 2880 1050 ) ( * * ) viagen43_post
+  NEW metal4 40 ( 2880 1050 ) ( * * ) viagen54_post
+  NEW metal5 50 ( 2880 1050 ) ( * * ) viagen65_post
+  NEW metal1 40 ( 2880 1050 ) ( * * ) viagen21_post
+  NEW metal2 40 ( 2880 1050 ) ( * * ) viagen32_post
+  NEW metal3 40 ( 2880 1050 ) ( * * ) viagen43_post
+  NEW metal4 40 ( 2880 1050 ) ( * * ) viagen54_post
+  NEW metal5 50 ( 2880 1050 ) ( * * ) viagen65_post
+  NEW metal6 160 ( 2880 -300 ) ( * 2300 )
+ ;
+END SPECIALNETS
+END DESIGN
