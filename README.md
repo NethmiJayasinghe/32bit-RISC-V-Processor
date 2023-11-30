@@ -15,6 +15,8 @@ GDS Layout:
 
 Tool Used
 VS Code: Verilog
+
 GTKwave: Capture Input & output signal Waveform
+
 Qflow: RTL to GDS
 
