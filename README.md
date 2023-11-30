@@ -4,8 +4,17 @@ this is a verilog code for 32 bit RISC V processor  ALU for basic arithmetic and
 ![RISC-V Arch](https://github.com/NethmiJayasinghe/32bit-RISC-V-Processor/assets/68787477/5f9697d8-fa29-480d-9bd5-22c8b975fa7b)
 
 
+
+
+
 Implementation:
-![image](https://github.com/NethmiJayasinghe/32bit-RISC-V-Processor/assets/143545523/78bd9f6a-cafb-49a6-b896-dc61665d81a8)
+
+![image](https://github.com/NethmiJayasinghe/32bit-RISC-V-Processor/assets/143545523/a610008f-75b2-42d5-a570-47a0d7a855f9)
+
+
+
+
+
 
 
 GDS Layout:
