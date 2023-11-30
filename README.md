@@ -9,7 +9,8 @@ Implementation:
 
 
 GDS Layout:
-![image](https://github.com/NethmiJayasinghe/32bit-RISC-V-Processor/assets/143545523/f574821a-9987-42e5-8140-f3e2c436ed25)
+![image](https://github.com/NethmiJayasinghe/32bit-RISC-V-Processor/assets/143545523/506054ef-146f-478e-83a0-fb5475d3e636)
+
 
 
 
